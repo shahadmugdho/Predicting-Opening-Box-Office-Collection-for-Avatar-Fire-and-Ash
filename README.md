@@ -1,4 +1,3 @@
-````markdown
 # 🎬 Box Office Prediction: Avatar: Fire and Ash
 
 ![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
