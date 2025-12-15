@@ -109,7 +109,7 @@ The `prediction.py` script inputs specific known data points for *Avatar: Fire a
   * **Cast:** Sam Worthington, Zoe Saldana, Sigourney Weaver
   * **Star Power:** Calculated dynamically based on the training data history.
 
-**Current Output:** (Run the script to see the live prediction\!)
+**Current Output:** (Run the script to see the live prediction\)
 
 ## 📜 Disclaimer
 
