@@ -56,3 +56,57 @@ Scrape raw box office data and fetch movie details.
 ```bash
 python boxoffice_data_.py
 python tmdb_movie_data_2009_2025.py
+
+
+### 2. Data Processing
+
+Merge datasets and calculate Star Power.
+
+Bash
+python merging1.py
+Output: movie_prediction_dataset_final.csv
+
+### 3. Model Training
+
+Train the CatBoost model with hyperparameter tuning.
+
+Bash
+python training_the_dataset.py
+Output: catboost_model_optuna.cbm (Saved Model)
+
+### 4. Prediction
+
+Generate the prediction for Avatar: Fire and Ash.
+
+Bash
+python prediction.py
+📊 Methodology
+The "Star Power" Metric
+
+A unique aspect of this model is the calculate_star_power function found in merging1.py. It quantifies the bankability of cast and crew by:
+
+Aggregating the past revenue of movies associated with the top 3 actors and the director.
+
+Applying a logarithmic scale to normalize the huge variance in box office numbers.
+
+Summing these weights to create a single Star_Power feature for the model.
+
+Model Performance
+
+The model is evaluated using RMSE (Root Mean Squared Error) on a validation set. The final hyperparameters are selected after 250 trials of Optuna optimization.
+
+🔮 Prediction: Avatar 3
+The prediction.py script inputs specific known data points for Avatar: Fire and Ash:
+
+Budget: Estimated at $250M+
+
+Director: James Cameron
+
+Cast: Sam Worthington, Zoe Saldana, Sigourney Weaver
+
+Star Power: Calculated dynamically based on the training data history.
+
+Current Output: (Run the script to see the live prediction!)
+
+📜 Disclaimer
+This project is for educational and research purposes. Box office predictions are estimates based on historical data patterns and do not guarantee actual financial performance.
